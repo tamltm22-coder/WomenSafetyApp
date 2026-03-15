@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgPlace"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:background="#EEE"
+        android:src="@drawable/ic_map_placeholder"
+        android:contentDescription="@string/app_name"/>
+
+    <TextView
+        android:id="@+id/tvPlaceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:paddingTop="12dp"
+        android:text="Tên địa điểm" />
+
+    <TextView
+        android:id="@+id/tvPlaceAddr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#666"
+        android:text="Địa chỉ" />
+
+    <Button
+        android:id="@+id/btnDirection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chỉ đường"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FF6A73"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"/>
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Header -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF6A73"
+        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:title="Gọi khẩn cấp"
+            android:titleTextColor="@android:color/white"
+            app:navigationIcon="@drawable/ic_arrow_back_24" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Nội dung -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Mô tả -->
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:paddingBottom="12dp"
+                android:text="Bạn muốn gọi cho ai (sau 30s không thao tác, ứng dụng sẽ tự động gọi theo thứ tự danh sách liên hệ của người thân)."
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <!-- Danh sách liên hệ động -->
+            <LinearLayout
+                android:id="@+id/layoutContacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <!-- Tiêu đề các số khẩn cấp -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Số khẩn cấp:"
+                android:textColor="#555"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="15sp" />
+
+            <!-- 3 nút khẩn cấp -->
+            <Button
+                android:id="@+id/btn112"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#FF6A73"
+                android:text="112 (Khẩn cấp, cứu hộ, tìm kiếm)"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn113"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#FF6A73"
+                android:text="113 (Công an)"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn115"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#FF6A73"
+                android:text="115 (Cứu thương)"
+                android:textColor="#FFFFFF" />
+            <!-- Danh sách số địa phương sẽ render động -->
+
+
+            <LinearLayout
+                android:id="@+id/layoutLocalNumbers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <!-- 🔽 Nút mới: thêm số điện thoại địa phương -->
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
